@@ -1,0 +1,21 @@
+#management-user {
+    margin: 30px;
+    
+    .icon-delete {
+        color: red;
+    }
+
+    .icon {
+        font-size: 18px;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+
+    .custom-select {
+        width: auto;
+    }
+
+    .add-user {
+        padding: 20px 0;
+    }
+}

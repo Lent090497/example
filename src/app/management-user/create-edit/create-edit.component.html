@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{fromParent.label}}</h4>
+    <i type="button" class="close bi bi-x-lg" aria-label="Close" (click)="fromParent.noFunc()"></i>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <label>Name</label>
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="fromParent.user.name">
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <label>Username</label>
+            <input type="text" class="form-control" placeholder="Username" [(ngModel)]="fromParent.user.username">
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="fromParent.user.email">
+        </div>
+        <div class="col-sm-12 col-lg-6" *ngIf="!fromParent.user.id">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <label for="Descriptions">Descriptions</label>
+            <textarea class="form-control" rows="3" placeholder="Descriptions"
+                [(ngModel)]="fromParent.user.description"></textarea>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="fromParent.noFunc()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="fromParent.yesFunc(fromParent.user)">Save</button>
+</div>
